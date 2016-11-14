@@ -5,7 +5,6 @@ corr <- function(directory, threshold = 0)
     
     if(length(thresholdIds) != 0)
     {
-        
         files <- file.path(directory, paste0(sprintf("%03d", thresholdIds), ".csv"))
         tables <- lapply(files, read.csv)
         alldata <- do.call(rbind, tables)
